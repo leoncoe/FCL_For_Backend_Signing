@@ -2,10 +2,10 @@ const fcl = require("@onflow/fcl");
 const { SHA3 } = require("sha3");
 
 var EC = require('elliptic').ec;
-const ec = new EC('secp256k1');
+const ec = new EC('p256');
 
-const ADDRESS = "Enter_Your_Address_Here";
-const PRIVATE_KEY = "Enter_Your_Private_Key_Here";
+const ADDRESS = "0xdd493e0c4aacf384";
+const PRIVATE_KEY = "b4d8f86f5b7a145b3f2c30c3e21b8d02d68b5c3d4a1bfa38e7c197c158dc4dfa";
 const KEY_ID = 0;
 const NUMBER_OF_KEYS_IN_ACCOUNT = 20
 const sign = (message) => {

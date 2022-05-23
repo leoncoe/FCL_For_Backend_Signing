@@ -3,13 +3,14 @@
 
 const fcl = require("@onflow/fcl");
 const t = require("@onflow/types");
-const { CreateCollection } = require("./cadence/transactions/CreateCollection.tx.js.js");
+const { MintNFT } = require("./cadence/transactions/MintNFT.tx.js");
 
 const {authorizationFunction, authorizationFunctionProposer} = require("./helpers/authorization.js");
 
 // var description = ""
-// var image = ""
-// var name = ""
+var image = "https://img.uefa.com/imgml/TP/players/1/2022/324x324/72048.jpg"
+var name = "Edin Dzeko"
+var address = "0xdd493e0c4aacf384"
 // var series = ""
 // var quantity = 100
 fcl.config()
@@ -18,14 +19,12 @@ fcl.config()
 
 const sendTx = async () => {
   const transactionId = await fcl.send([
-    fcl.transaction(CreateCollection),
-    // fcl.args([
-    //   fcl.arg(description, t.String),
-    //   fcl.arg(image, t.String),
-    //   fcl.arg(name, t.String),
-    //   fcl.arg(series, t.String),
-    //   fcl.arg(quantity, t.UInt64),
-    // ]),
+    fcl.transaction(MintNFT),
+    fcl.args([
+      fcl.arg(address, t.Address),
+      fcl.arg(image, t.String),
+      fcl.arg(name, t.String),
+    ]),
     fcl.proposer(authorizationFunction),
     fcl.payer(authorizationFunction),
     fcl.authorizations([authorizationFunction]),

@@ -6,7 +6,8 @@
 		}
 	},
 	"contracts": {
-		"NFTExample": "./contracts/NFTExample.cdc"
+		"StatsInterface": "./contracts/StatsInterface.cdc",
+		"Dzeko": "./contracts/Dzeko.cdc"
 	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
@@ -16,23 +17,24 @@
 	"accounts": {
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
-			"key": "56d2b99eba45cab201b7c7f51f655df1cb51c1b8fbbce17dc65858994c8173d9"
+			"key": "87d93565e3cd6054f1eb7eab673d80ac3dc68d4b94d1204f78c3caf5e81f9ab4"
 		},
 		"testnet-account": {
-			 "address": "ENTER YOUR ADDRESS HERE",
-			 "key": {
-				 "type": "hex",
-				 "index": 0,
-				 "signatureAlgorithm": "ECDSA_secp256k1",
-				 "hashAlgorithm": "SHA3_256",
-				 "privateKey": "ENTER YOUR PRIVATE KEY HERE"
-			 }
-		}
+			"address": "0xdd493e0c4aacf384",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "b4d8f86f5b7a145b3f2c30c3e21b8d02d68b5c3d4a1bfa38e7c197c158dc4dfa"
+			}
+	   }
 	},
 	"deployments": {
 		"testnet": {
 			"testnet-account": [
-				"NFTExample"
+				"StatsInterface",
+				"Dzeko"
 			]
 		 }
 	}
