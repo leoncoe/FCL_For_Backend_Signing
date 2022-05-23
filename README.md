@@ -1,4 +1,4 @@
-<h1>FCL for Backend Signing (NFT Minting Example)</h1>
+<h1>FCL for Backend Signing (NFT Minting with Stats Interface)</h1>
 
 <code>run npm install</code>
 
